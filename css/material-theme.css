@@ -1,0 +1,139 @@
+/* Material Design 3 (Material You) CSS Custom Properties & Design Tokens */
+:root {
+  /* Color Palette - Baseline Material 3 Theme (Teal / Indigo Accent) */
+  --md-sys-color-primary: #006a6a;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #6ff7f6;
+  --md-sys-color-on-primary-container: #002020;
+
+  --md-sys-color-secondary: #4a6363;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #cce8e7;
+  --md-sys-color-on-secondary-container: #051f1f;
+
+  --md-sys-color-tertiary: #4b607a;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #d3e4ff;
+  --md-sys-color-on-tertiary-container: #041c33;
+
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  --md-sys-color-background: #fafdfc;
+  --md-sys-color-on-background: #191c1c;
+
+  --md-sys-color-surface: #f7fafa;
+  --md-sys-color-on-surface: #191c1c;
+  --md-sys-color-surface-variant: #dae5e4;
+  --md-sys-color-on-surface-variant: #3f4948;
+
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f1f5f4;
+  --md-sys-color-surface-container: #ebefee;
+  --md-sys-color-surface-container-high: #e5e9e8;
+  --md-sys-color-surface-container-highest: #e0e4e3;
+
+  --md-sys-color-outline: #6f7979;
+  --md-sys-color-outline-variant: #bec9c8;
+
+  /* Highlight Categories Tokens */
+  --md-highlight-date-bg: #e0f2fe;
+  --md-highlight-date-color: #0369a1;
+  --md-highlight-money-bg: #dcfce7;
+  --md-highlight-money-color: #15803d;
+  --md-highlight-email-bg: #f3e8ff;
+  --md-highlight-email-color: #6b21a8;
+  --md-highlight-action-bg: #fef3c7;
+  --md-highlight-action-color: #b45309;
+  --md-highlight-heading-bg: #f1f5f9;
+  --md-highlight-heading-color: #0f172a;
+
+  /* Typography */
+  --md-ref-typeface-brand: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --md-ref-typeface-plain: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --md-ref-typeface-monospace: 'Roboto Mono', 'Courier New', Courier, monospace;
+
+  /* M3 Shape System */
+  --md-shape-corner-none: 0px;
+  --md-shape-corner-extra-small: 4px;
+  --md-shape-corner-small: 8px;
+  --md-shape-corner-medium: 12px;
+  --md-shape-corner-large: 16px;
+  --md-shape-corner-extra-large: 28px;
+  --md-shape-corner-full: 9999px;
+
+  /* Elevation Shadows */
+  --md-elevation-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --md-elevation-2: 0px 2px 6px 2px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
+  --md-elevation-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.30), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --md-elevation-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.30), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+  --md-elevation-5: 0px 4px 4px 0px rgba(0, 0, 0, 0.30), 0px 8px 12px 6px rgba(0, 0, 0, 0.15);
+
+  /* Animation Transitions */
+  --md-motion-easing-standard: cubic-bezier(0.2, 0.0, 0.0, 1.0);
+  --md-motion-duration-short: 200ms;
+  --md-motion-duration-medium: 300ms;
+}
+
+/* Dark mode auto tokens */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #4cdada;
+    --md-sys-color-on-primary: #003737;
+    --md-sys-color-primary-container: #004f4f;
+    --md-sys-color-on-primary-container: #6ff7f6;
+
+    --md-sys-color-secondary: #b0cccb;
+    --md-sys-color-on-secondary: #1b3535;
+    --md-sys-color-secondary-container: #324b4b;
+    --md-sys-color-on-secondary-container: #cce8e7;
+
+    --md-sys-color-tertiary: #b3c8e8;
+    --md-sys-color-on-tertiary: #1c314a;
+    --md-sys-color-tertiary-container: #334861;
+    --md-sys-color-on-tertiary-container: #d3e4ff;
+
+    --md-sys-color-error: #ffb4ab;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000a;
+    --md-sys-color-on-error-container: #ffdad6;
+
+    --md-sys-color-background: #0e1414;
+    --md-sys-color-on-background: #e0e4e3;
+
+    --md-sys-color-surface: #0e1414;
+    --md-sys-color-on-surface: #e0e4e3;
+    --md-sys-color-surface-variant: #3f4948;
+    --md-sys-color-on-surface-variant: #bec9c8;
+
+    --md-sys-color-surface-container-lowest: #090f0f;
+    --md-sys-color-surface-container-low: #171d1d;
+    --md-sys-color-surface-container: #1b2121;
+    --md-sys-color-surface-container-high: #252b2b;
+    --md-sys-color-surface-container-highest: #303636;
+
+    --md-sys-color-outline: #889392;
+    --md-sys-color-outline-variant: #3f4948;
+
+    --md-highlight-date-bg: #0369a1;
+    --md-highlight-date-color: #e0f2fe;
+    --md-highlight-money-bg: #15803d;
+    --md-highlight-money-color: #dcfce7;
+    --md-highlight-email-bg: #6b21a8;
+    --md-highlight-email-color: #f3e8ff;
+    --md-highlight-action-bg: #b45309;
+    --md-highlight-action-color: #fef3c7;
+    --md-highlight-heading-bg: #334155;
+    --md-highlight-heading-color: #f8fafc;
+  }
+}
+
+/* Material Design Elevation Utility Classes */
+.elevation-0 { box-shadow: none; }
+.elevation-1 { box-shadow: var(--md-elevation-1); }
+.elevation-2 { box-shadow: var(--md-elevation-2); }
+.elevation-3 { box-shadow: var(--md-elevation-3); }
+.elevation-4 { box-shadow: var(--md-elevation-4); }
+.elevation-5 { box-shadow: var(--md-elevation-5); }

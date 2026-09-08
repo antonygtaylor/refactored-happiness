@@ -1,0 +1,17 @@
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /css/material-theme.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /css/app.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/jszip.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/mammoth.browser.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/xlsx.full.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/pdf.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/pdf.worker.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/blob-manager.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/highlighter.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/parser.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/app.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /js/vendor/alpine.min.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:33] "GET /css/print.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:34] "GET /sw.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:35] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Sep/2026 11:19:35] "GET /manifest.json HTTP/1.1" 200 -

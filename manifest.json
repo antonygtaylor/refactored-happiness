@@ -1,0 +1,18 @@
+{
+  "name": "DocuHighlight Offline Reader & Parser",
+  "short_name": "DocuHighlight",
+  "description": "Offline-first zero-build Progressive Web Application for parsing document formats and highlighting key passages.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fafdfc",
+  "theme_color": "#006a6a",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23006a6a'><path d='M384 121.9c0-6.3-2.5-12.4-7-16.9L279 8c-4.5-4.5-10.6-7-16.9-7H120C97.9 1 80 18.9 80 41v430c0 22.1 17.9 40 40 40h272c22.1 0 40-17.9 40-40V121.9zM256 32l96 96h-96V32z'/></svg>",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,453 @@
+/* Main Application CSS - Material Design 3 Styling */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--md-ref-typeface-plain);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header & Top Bar */
+.md-top-app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+}
+
+.md-top-app-bar .brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--md-sys-color-primary);
+}
+
+.md-top-app-bar .brand-icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.md-top-app-bar .header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.offline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--md-shape-corner-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+
+.offline-badge::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10b981;
+}
+
+/* Layout Container */
+.app-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Material Design Buttons */
+.md-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--md-shape-corner-full);
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--md-motion-duration-short) var(--md-motion-easing-standard),
+              box-shadow var(--md-motion-duration-short) var(--md-motion-easing-standard);
+  text-decoration: none;
+}
+
+.md-button-filled {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+.md-button-filled:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 90%, black);
+  box-shadow: var(--md-elevation-1);
+}
+
+.md-button-outlined {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
+}
+
+.md-button-outlined:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+}
+
+.md-button-text {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  padding: 0.5rem 0.75rem;
+}
+
+.md-button-text:hover {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 8%, transparent);
+}
+
+.md-button-danger {
+  background-color: transparent;
+  color: var(--md-sys-color-error);
+  border: 1px solid var(--md-sys-color-error);
+}
+
+.md-button-danger:hover {
+  background-color: var(--md-sys-color-error-container);
+  color: var(--md-sys-color-on-error-container);
+}
+
+/* Drag and Drop Upload Zone */
+.drop-zone {
+  border: 2px dashed var(--md-sys-color-outline);
+  border-radius: var(--md-shape-corner-extra-large);
+  background-color: var(--md-sys-color-surface-container-low);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--md-motion-duration-medium) var(--md-motion-easing-standard);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-container-high);
+  transform: scale(1.005);
+}
+
+.drop-zone .drop-icon {
+  width: 56px;
+  height: 56px;
+  fill: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-primary-container);
+  padding: 12px;
+  border-radius: var(--md-shape-corner-large);
+}
+
+.drop-zone h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--md-sys-color-on-surface);
+}
+
+.drop-zone p {
+  font-size: 0.875rem;
+  color: var(--md-sys-color-outline);
+}
+
+/* Stats Toolbar & Search Bar */
+.controls-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background-color: var(--md-sys-color-surface-container-lowest);
+  padding: 1rem 1.25rem;
+  border-radius: var(--md-shape-corner-large);
+}
+
+.stats-group {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.stats-item strong {
+  color: var(--md-sys-color-primary);
+  font-weight: 600;
+}
+
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--md-sys-color-surface-container-high);
+  border-radius: var(--md-shape-corner-full);
+  padding: 0.4rem 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+.search-field input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: var(--md-sys-color-on-surface);
+}
+
+.search-field svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--md-sys-color-outline);
+}
+
+/* Cards Section */
+.file-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Material Card */
+.material-card {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  border-radius: var(--md-shape-corner-large);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  overflow: hidden;
+  transition: box-shadow var(--md-motion-duration-short) var(--md-motion-easing-standard);
+}
+
+.material-card:hover {
+  box-shadow: var(--md-elevation-2);
+}
+
+.card-header {
+  padding: 1rem 1.25rem;
+  background-color: var(--md-sys-color-surface-container-low);
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-title-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--md-shape-corner-small);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.card-icon.pdf { background-color: #fee2e2; color: #dc2626; }
+.card-icon.docx, .card-icon.doc { background-color: #dbeafe; color: #2563eb; }
+.card-icon.xlsx, .card-icon.xls, .card-icon.csv { background-color: #dcfce7; color: #16a34a; }
+.card-icon.pptx, .card-icon.ppt { background-color: #ffedd5; color: #ea580c; }
+.card-icon.zip { background-color: #f3e8ff; color: #9333ea; }
+.card-icon.txt, .card-icon.md { background-color: #f1f5f9; color: #475569; }
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card-filename {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--md-sys-color-on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-meta {
+  font-size: 0.75rem;
+  color: var(--md-sys-color-outline);
+  display: flex;
+  gap: 0.75rem;
+}
+
+.card-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.card-body {
+  padding: 1.25rem;
+  font-size: 0.925rem;
+  color: var(--md-sys-color-on-surface);
+  overflow-x: auto;
+}
+
+/* Parsed Content Styling inside Card Body */
+.card-body p {
+  margin-bottom: 0.75rem;
+}
+
+.card-body h1, .card-body h2, .card-body h3, .card-body h4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--md-sys-color-primary);
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+table.excel-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+table.excel-table th, table.excel-table td {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+table.excel-table th {
+  background-color: var(--md-sys-color-surface-container-high);
+  font-weight: 600;
+}
+
+table.excel-table tr:nth-child(even) {
+  background-color: var(--md-sys-color-surface-container-lowest);
+}
+
+.pptx-slide {
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-shape-corner-medium);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--md-sys-color-surface-container-low);
+}
+
+.pptx-slide h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--md-sys-color-tertiary);
+}
+
+.pptx-speaker-notes {
+  margin-top: 0.75rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed var(--md-sys-color-outline-variant);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--md-sys-color-outline);
+}
+
+/* Highlighting Material Tokens */
+mark.md-highlight {
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+  font-weight: 500;
+}
+
+mark.md-highlight-date {
+  background-color: var(--md-highlight-date-bg);
+  color: var(--md-highlight-date-color);
+}
+
+mark.md-highlight-money {
+  background-color: var(--md-highlight-money-bg);
+  color: var(--md-highlight-money-color);
+}
+
+mark.md-highlight-email {
+  background-color: var(--md-highlight-email-bg);
+  color: var(--md-highlight-email-color);
+}
+
+mark.md-highlight-action {
+  background-color: var(--md-highlight-action-bg);
+  color: var(--md-highlight-action-color);
+}
+
+mark.md-highlight-heading {
+  background-color: var(--md-highlight-heading-bg);
+  color: var(--md-highlight-heading-color);
+  font-weight: 600;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: var(--md-sys-color-outline);
+}
+
+.empty-state svg {
+  width: 64px;
+  height: 64px;
+  fill: var(--md-sys-color-outline-variant);
+  margin-bottom: 1rem;
+}
+
+/* Loading Spinner */
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--md-sys-color-outline-variant);
+  border-top-color: var(--md-sys-color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  display: inline-block;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,98 @@
+/* Print CSS Stylesheet - Optimized for Document Output & PDF Exports */
+
+@media print {
+  /* Hide non-printable UI elements */
+  .md-top-app-bar,
+  .drop-zone,
+  .controls-toolbar,
+  .header-actions,
+  .card-toolbar,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+
+  .app-container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .file-grid {
+    display: block !important;
+  }
+
+  /* Cards layout in print */
+  .material-card {
+    box-shadow: none !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 4px !important;
+    margin-bottom: 1.5rem !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    background: #ffffff !important;
+  }
+
+  .card-header {
+    background-color: #f5f5f5 !important;
+    border-bottom: 1px solid #cccccc !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  .card-filename {
+    color: #000000 !important;
+    font-size: 12pt !important;
+    font-weight: bold !important;
+  }
+
+  .card-meta {
+    color: #555555 !important;
+    font-size: 9pt !important;
+  }
+
+  .card-body {
+    padding: 0.75rem !important;
+    color: #000000 !important;
+  }
+
+  /* Table styling for print */
+  table.excel-table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  table.excel-table th, table.excel-table td {
+    border: 1px solid #888888 !important;
+    padding: 0.35rem !important;
+    font-size: 9pt !important;
+  }
+
+  table.excel-table th {
+    background-color: #eee !important;
+  }
+
+  /* Print Highlighting: Grayscale/High-contrast readable */
+  mark.md-highlight {
+    border: 1px solid #000000 !important;
+    background: transparent !important;
+    color: #000000 !important;
+    font-weight: bold !important;
+    padding: 0 0.2rem !important;
+  }
+
+  mark.md-highlight-date::before { content: "[Date: "; }
+  mark.md-highlight-date::after { content: "]"; }
+
+  mark.md-highlight-money::before { content: "[Amount: "; }
+  mark.md-highlight-money::after { content: "]"; }
+
+  mark.md-highlight-action::before { content: "[ACTION: "; }
+  mark.md-highlight-action::after { content: "]"; }
+}
